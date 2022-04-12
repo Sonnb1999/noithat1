@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,200,300,800">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/reponsive.css">
+</head>
+
+<body>
+    <div class="main">
+        <nav id="header" class="navbar navbar-expand-lg ">
+            <div class="container-fluid" style="width: 100%; height:100%;padding: 0;">
+                <button class="btn-sidebar-left" onclick="openNavLeft()">
+                    <i class="fa-solid fa-indent"></i>
+                </button>
+                <div class="logo">
+                    <a class="navbar-brand" href="#">
+                        <img class="default_logo" src="./assets/images/logo1.png" alt="image">
+                    </a>
+                </div>
+
+                <div class="collapse navbar-collapse menu" id="navbarSupportedContent">
+                    <div>
+                        <ul class="navbar-nav  mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link " aria-current="page" href="project.html">DỰ ÁN</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " aria-current="page" href="build.html">XÂY DỰNG</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " aria-current="page" href="supplies.html">vật tư</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " aria-current="page" href="fengshui.html">phong thủy</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " aria-current="page" href="contract.html">hợp đồng</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " aria-current="page" href="instructor.html">Giới thiệu</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " aria-current="page" href="contact.html">Liên hệ</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="btn-right-area">
+                    <i class="fa-solid fa-magnifying-glass btn-right"></i>
+
+                    <i class="fa-solid fa-sliders btn-right btn-menu" onclick="openNav()"
+                        style="border-left: 1px solid rgba(255, 255, 255, 0.3);"></i>
+                </div>
+            </div>
+        </nav>
+
+        <div id="slider">
+            <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                <div class="carousel-indicators dot">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                        class="active dot__item" aria-current="true" aria-label="Slide 1"> <span>1</span></button>
+                    <button class=" dot__item" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide-to="1" aria-label="Slide 2">2</button>
+                    <button class=" dot__item" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide-to="2" aria-label="Slide 3">3</button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="./assets/images/anh1.jpg" class="d-block w-100" alt="image">
+                        <div class="carousel-caption d-md-block list-about">
+                            <span class="text-about">Happy villa</span>
+                            <button class="btn btn-see btn-light">xem thêm</button>
+
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="./assets/images/anh2.jpg" class="d-block w-100" alt="./assets/images/anh2.jpg">
+                        <div class="carousel-caption  d-md-block list-about">
+                            <span class="text-about">Happy villa</span>
+                            <button class="btn btn-see btn-light">xem thêm</button>
+
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/images/anh3.jpg" class="d-block w-100" alt="./assets/images/anh3.jpg">
+                        <div class="carousel-caption  d-md-block list-about">
+                            <span class="text-about">Happy villa</span>
+                            <button class="btn btn-see btn-light">xem thêm</button>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button> -->
+            </div>
+        </div>
+
+        <div id="body">
+            <div id="content">
+                <!-- About -->
+                <div class="content-section" id="about">
+                    <h2 class="section-heading">
+                        TẠI SAO BẠN LẠI CHỌN THANH THANG INTERIOR?
+                    </h2>
+                    <p class="section-sub-heading">We love THANH THANG INTERIOR</p>
+                    <p class="text-about">We have created a fictional about
+                        website. Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut
+                        aliquip ex ea commodo consequat. Duis aute irure dolor
+                        in reprehenderit in voluptate velit esse cillum dolore
+                        eu fugiat nulla pariatur. Excepteur sint occaecat
+                        cupidatat non proident, sunt in culpa qui officia
+                        deserunt mollit anim id est laborum consectetur
+                        adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut
+                        aliquip ex ea commodo consequat.</p>
+                    <button class="btn btn-light border-1 border-dark p-2">Xem thêm
+                        <i class="ti-arrow-right"></i>
+                    </button>
+                </div>
+
+                <!-- product-section -->
+                <div class="product-section" id="design">
+                    <!-- places -->
+                    <div class="places-list">
+                        <div class="places-item">
+                            <div class="place-image1"></div>
+                            <h3 class="places-pading">PHÒNG KHÁCH</h3>
+                        </div>
+                        <div class="places-item">
+                            <div class="place-image2"></div>
+                            <h3 class="places-pading">PHÒNG KHÁCH</h3>
+                        </div>
+                        <div class="places-item">
+                            <div class="place-image3"></div>
+                            <h3 class="places-pading">PHÒNG KHÁCH</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- skills -->
+                <div class="skill-section" id="skill">
+                    <h2 class="section-heading">
+                        DỰ ÁN KIẾN TRÚC
+                    </h2>
+                    <!-- list item -->
+                    <div class="content-section">
+                        <video width="100%" poster="./assets/images/anh2.jpg" controls>
+                            <source src="./assets/video/video1.webm" type="video/webm">
+                        </video>
+
+                        <div class="list-item ">
+                            <figure class="snip0016">
+                                <img src="./assets/images/image_skills/anh1.jpg" alt="sample41" />
+                                <figcaption>
+                                    <h4>TROPIC VILLA Q2</h4>
+                                    <p><a href="#">Dự Án</a></p>
+                                </figcaption>
+                            </figure>
+                            <figure class="snip0016">
+                                <img src="./assets/images/image_skills/anh2.jpg" alt="sample42" />
+                                <figcaption>
+                                    <h4>TROPIC VILLA Q2</h4>
+                                    <p><a href="#">Dự Án</a></p>
+                                </figcaption>
+                            </figure>
+                            <figure class="snip0016">
+                                <img src="./assets/images/anh3.jpg" alt="sample43" />
+                                <figcaption>
+                                    <h4>TROPIC VILLA Q2</h4>
+                                    <p><a href="#">Dự Án</a></p>
+                                </figcaption>
+                            </figure>
+                            <figure class="snip0016">
+                                <img src="./assets/images/image_skills/anh1.jpg" alt="sample41" />
+                                <figcaption>
+                                    <h4>TROPIC VILLA Q2</h4>
+                                    <p><a href="#">Dự Án</a></p>
+                                </figcaption>
+                            </figure>
+                            <figure class="snip0016">
+                                <img src="./assets/images/image_skills/anh2.jpg" alt="sample42" />
+                                <figcaption>
+                                    <h4>TROPIC VILLA Q2</h4>
+                                    <p><a href="#">Dự Án</a></p>
+                                </figcaption>
+                            </figure>
+                            <figure class="snip0016">
+                                <img src="./assets/images/anh3.jpg" alt="sample43" />
+                                <figcaption>
+                                    <h4>TROPIC VILLA Q2</h4>
+                                    <p><a href="#">Dự Án</a></p>
+                                </figcaption>
+                            </figure>
+                            <figure class="snip0016">
+                                <img src="./assets/images/image_skills/anh1.jpg" alt="sample41" />
+                                <figcaption>
+                                    <h4>TROPIC VILLA Q2</h4>
+                                    <p><a href="#">Dự Án</a></p>
+                                </figcaption>
+                            </figure>
+                            <figure class="snip0016">
+                                <img src="./assets/images/image_skills/anh2.jpg" alt="sample42" />
+                                <figcaption>
+                                    <h4>TROPIC VILLA Q2</h4>
+                                    <p><a href="#">Dự Án</a></p>
+                                </figcaption>
+                            </figure>
+                            <figure class="snip0016">
+                                <img src="./assets/images/anh3.jpg" alt="sample43" />
+                                <figcaption>
+                                    <h4>TROPIC VILLA Q2</h4>
+                                    <p><a href="#">Dự Án</a></p>
+                                </figcaption>
+                            </figure>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- team -->
+                <div class="skill-section" id="team">
+                    <h2 class="section-heading">
+                        XÂY DỰNG I HOÀN THIỆN
+                    </h2>
+                    <!-- list item -->
+                    <div class="content-section">
+                        <video width="100%" poster="./assets/images/anh2.jpg" controls>
+                            <source src="./assets/video/video1.webm" type="video/webm">
+                        </video>
+
+                        <div class="list-item ">
+
+                            <figure class="snip0016">
+                                <img src="./assets/images/image_skills/anh1.jpg" alt="sample41" />
+                                <figcaption>
+                                    <h4>TROPIC VILLA Q2</h4>
+                                    <p><a href="#">Dự Án</a></p>
+                                </figcaption>
+                            </figure>
+                            <figure class="snip0016">
+                                <img src="./assets/images/image_skills/anh2.jpg" alt="sample42" />
+                                <figcaption>
+                                    <h4>TROPIC VILLA Q2</h4>
+                                    <p><a href="#">Dự Án</a></p>
+                                </figcaption>
+                            </figure>
+                            <figure class="snip0016">
+                                <img src="./assets/images/anh3.jpg" alt="sample43" />
+                                <figcaption>
+                                    <h4>TROPIC VILLA Q2</h4>
+                                    <p><a href="#">Dự Án</a></p>
+                                </figcaption>
+                            </figure>
+                            <figure class="snip0016">
+                                <img src="./assets/images/image_skills/anh1.jpg" alt="sample41" />
+                                <figcaption>
+                                    <h4>TROPIC VILLA Q2</h4>
+                                    <p><a href="#">Dự Án</a></p>
+                                </figcaption>
+                            </figure>
+                            <figure class="snip0016">
+                                <img src="./assets/images/image_skills/anh2.jpg" alt="sample42" />
+                                <figcaption>
+                                    <h4>TROPIC VILLA Q2</h4>
+                                    <p><a href="#">Dự Án</a></p>
+                                </figcaption>
+                            </figure>
+                            <figure class="snip0016">
+                                <img src="./assets/images/anh3.jpg" alt="sample43" />
+                                <figcaption>
+                                    <h4>TROPIC VILLA Q2</h4>
+                                    <p><a href="#">Dự Án</a></p>
+                                </figcaption>
+                            </figure>
+                            <figure class="snip0016">
+                                <img src="./assets/images/image_skills/anh1.jpg" alt="sample41" />
+                                <figcaption>
+                                    <h4>TROPIC VILLA Q2</h4>
+                                    <p><a href="#">Dự Án</a></p>
+                                </figcaption>
+                            </figure>
+                            <figure class="snip0016">
+                                <img src="./assets/images/image_skills/anh2.jpg" alt="sample42" />
+                                <figcaption>
+                                    <h4>TROPIC VILLA Q2</h4>
+                                    <p><a href="#">Dự Án</a></p>
+                                </figcaption>
+                            </figure>
+                            <figure class="snip0016">
+                                <img src="./assets/images/anh3.jpg" alt="sample43" />
+                                <figcaption>
+                                    <h4>TROPIC VILLA Q2</h4>
+                                    <p><a href="#">Dự Án</a></p>
+                                </figcaption>
+                            </figure>
+                        </div>
+
+                    </div>
+                </div>
+                
+                <!-- thi cong -->
+                <div class="skill-section" id="team">
+                    <h2 class="section-heading">
+                        THI CÔNG I THỰC TẾ
+                    </h2>
+                    <!-- list item -->
+                    <div class="content-section">
+                        <video width="100%" poster="./assets/images/anh2.jpg" controls>
+                            <source src="./assets/video/video1.webm" type="video/webm">
+                        </video>
+                    </div>
+                </div>
+                <!-- price -->
+                <div id="price">
+                    <div class="price-image">
+                        <h1 class="price-heading">BÁO GIÁ - GIAI ĐOẠN THIẾT KẾ</h1>
+                    </div>
+                    <div class="content-section">
+                        <img class="image_construction" src="./assets/images/image_construction/anh1.jpg" alt="">
+                        <div class="list-item row">
+                            <div class="col-3 item">
+                                <div class="pricing_header">
+                                    <h4>TRỌN GÓI đ/m²</h4>
+                                    <div class="pricing_price_wrap">
+                                        <div class="pricing_price">380</div>
+                                    </div>
+                                    <span class="price_decimal">
+                                        000
+                                    </span>
+                                    <div class="pricing_desc"></div>
+                                </div>
+                                <div class="pricing_content">
+                                    <p>
+                                        <strong>NHÀ PHỐ</strong>
+                                        <br>HIỆN ĐẠI<br>380.000<br>
+                                        <strong>BIỆT
+                                            THỰ</strong>
+                                        <br>
+                                        HIỆN ĐẠI
+                                        <br>
+                                        450.000
+                                        <br>
+                                        ------------------------
+                                        <br>
+                                        3D nội
+                                        thất
+                                        <br>3D ngoại thất<br>Hồ sơ XPXD<br>Bản vẽ nội thất<br>Bản vẽ kết cấu<br>Bản
+                                        vẽ kiến trúc<br>Bản vẽ điện+nước
+                                    </p>
+                                </div>
+                                <div class="pricing_footer">
+                                    <div class="elementor-button-wrapper">
+                                        <a href="#" class="btn pricing_btn">
+                                            <span>CHOOSE PLAN</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-3 item">
+                                <div class="pricing_header">
+                                    <h4>TRỌN GÓI đ/m²</h4>
+                                    <div class="pricing_price_wrap">
+                                        <div class="pricing_price">280</div>
+
+                                    </div>
+                                    <span class="price_decimal">
+                                        000
+                                    </span>
+                                    <div class="pricing_desc"></div>
+                                </div>
+                                <div class="pricing_content">
+                                    <p><strong>NHÀ PHỐ</strong><br>HIỆN ĐẠI<br>280.000<br><strong>BIỆT
+                                            THỰ</strong><br>HIỆN ĐẠI<br>320.000<br>------------------------<br>3D chi
+                                        tiết<br>3D ngoại thất<br>Hồ sơ XPXD<br>T Kế công năng<br>Bản vẽ kết cấu<br>Bản
+                                        vẽ kiến trúc<br>Bản vẽ điện+nước</p>
+                                </div>
+                                <div class="pricing_footer">
+                                    <div class="elementor-button-wrapper">
+                                        <a href="#" class="btn pricing_btn">
+                                            <span>CHOOSE PLAN</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-3 item">
+                                <div class="pricing_header">
+                                    <h4>TRỌN GÓI đ/m²</h4>
+                                    <div class="pricing_price_wrap">
+                                        <div class="pricing_price">280</div>
+                                    </div>
+                                    <span class="price_decimal">
+                                        000
+                                    </span>
+                                    <div class="pricing_desc"></div>
+                                </div>
+                                <div class="pricing_content">
+                                    <p><strong>NHÀ PHỐ</strong><br>HIỆN ĐẠI<br>280.000<br><strong>BIỆT
+                                            THỰ</strong><br>HIỆN ĐẠI<br>320.000<br>------------------------<br>3D chi
+                                        tiết<br>3D nội thất<br>Hồ sơ XPXD<br>T kế công năng<br>Bản vẽ kết
+                                        cấu<br>Bảnvẽ triển khai<br>Bản vẽ điện+nước</p>
+                                </div>
+                                <div class="pricing_footer">
+                                    <div class="elementor-button-wrapper">
+                                        <a href="#" class="btn pricing_btn">
+                                            <span>CHOOSE PLAN</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-3 item">
+                                <div class="pricing_header">
+                                    <h4>TRỌN GÓI đ/m²</h4>
+                                    <div class="pricing_price_wrap">
+                                        <div class="pricing_price">420</div>
+                                    </div>
+                                    <span class="price_decimal">
+                                        000
+                                    </span>
+                                    <div class="pricing_desc"></div>
+                                </div>
+                                <div class="pricing_content">
+                                    <p><strong>NHÀ PHỐ</strong><br>HIỆN ĐẠI<br>420.000<br><strong>BIỆT
+                                            THỰ</strong><br>HIỆN ĐẠI<br>480.000<br>------------------------<br>3D
+                                        nội thất<br>3D ngoại thất<br>Hồ sơ XP cải tạo<br>Bản vẽ kiến trúc<br>Bản
+                                        vẽ kết cấu<br>Bản vẽ kiến trúc<br>Bản vẽ điện+nước</p>
+                                </div>
+                                <div class="pricing_footer">
+                                    <div class="elementor-button-wrapper">
+                                        <a href="#" class="btn pricing_btn">
+                                            <span>CHOOSE PLAN</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--  color_scheme -->
+                <div id="color_scheme">
+                    <div class="color_scheme-image">
+                        <h1 class="color_scheme-heading">nguyên lý phối màu</h1>
+                    </div>
+                    <div class="content-section">
+                        <div class="list-item row">
+                            <div class="item_image ">
+                                <div class="swiper-slide-inner">
+                                    <div class="elementor-slide-heading">
+                                        Mix
+                                        <br>
+                                        Colour 01
+                                    </div>
+                                    <div class="elementor-slide-description">
+                                        Thổ - Kim
+                                    </div>
+                                    <a href="#" class="btn bg-light text-warning btn_item">Click here</a>
+                                </div>
+
+                            </div>
+
+                            <div class="item_image ">
+                                <div class="swiper-slide-inner">
+                                    <div class="elementor-slide-heading">
+                                        Mix
+                                        <br>
+                                        Colour 01
+                                    </div>
+                                    <div class="elementor-slide-description">
+                                        Thổ - Kim
+                                    </div>
+                                    <a href="#" class="btn bg-light text-warning btn_item">Click here</a>
+                                </div>
+
+                            </div>
+
+                            <div class="item_image ">
+                                <div class="swiper-slide-inner">
+                                    <div class="elementor-slide-heading">
+                                        Mix
+                                        <br>
+                                        Colour 01
+                                    </div>
+                                    <div class="elementor-slide-description">
+                                        Thổ - Kim
+                                    </div>
+                                    <a href="#" class="btn bg-light text-warning btn_item">Click here</a>
+                                </div>
+
+                            </div>
+
+                            <div class="item_image ">
+                                <div class="swiper-slide-inner">
+                                    <div class="elementor-slide-heading">
+                                        Mix
+                                        <br>
+                                        Colour 01
+                                    </div>
+                                    <div class="elementor-slide-description">
+                                        Thổ - Kim
+                                    </div>
+                                    <a href="#" class="btn bg-light text-warning btn_item">Click here</a>
+                                </div>
+
+                            </div>
+
+                            <div class="item_image">
+                                <div class="swiper-slide-inner">
+                                    <div class="elementor-slide-heading">
+                                        Mix
+                                        <br>
+                                        Colour 01
+                                    </div>
+                                    <div class="elementor-slide-description">
+                                        Thổ - Kim
+                                    </div>
+                                    <a href="#" class="btn bg-light text-warning btn_item">Click here</a>
+                                </div>
+
+                            </div>
+
+                            <div class="item_image ">
+                                <div class="swiper-slide-inner">
+                                    <div class="elementor-slide-heading">
+                                        Mix
+                                        <br>
+                                        Colour 01
+                                    </div>
+                                    <div class="elementor-slide-description">
+                                        Thổ - Kim
+                                    </div>
+                                    <a href="#" class="btn bg-light text-warning btn_item">Click here</a>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div id="footer">
+                <div class="footer-section list-item">
+                    <div class="item">
+                        <div class="">
+                            <img class="footer-logo" src="./assets/images/logo1.png" alt="">
+                        </div>
+                        <p class="footer-label">
+                            Với 6 năm kinh nghiệm hoạt động trong lĩnh vực “ Tư vấn kiến trúc và xây dựng “, chúng tôi
+                            tự hào là công ty có cấu trúc nhân sự trẻ trung, nhiệt huyết, tài năng kết hợp với đội ngũ
+                            quản lý dạn dày kinh nghiệm để có thể chủ động tìm kiếm, cập nhật xu hướng , cải tiến liên
+                            tục không ngừng, mang đến khách hàng những sản phẩm khác biệt và mang tính hiệu quả.
+                        </p>
+                        <p class="footer-link">
+                            <a href="#">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fa-brands fa-twitter"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fa-brands fa-instagram-square"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
+                        </p>
+                    </div>
+                    <div class="item">
+                        <div class="footer-header">
+                            Liên Hệ
+                        </div>
+                        <div class="footer-info">
+                            <div class="row row-infor">
+                                <i class="fa-solid fa-location-dot col-2"></i>
+                                <span class="col-9">
+                                    45 đường số 29_Khu Đô Thị Vạn Phúc, phường Hiệp Bình Phước_tp.Thủ Đức _ tp.HCM
+                                </span>
+                            </div>
+
+                            <div class="row row-infor">
+                                <i class="fa-solid fa-phone-volume col-2"></i>
+                                <span class="col-9">
+                                    081 66.99.669
+                                </span>
+                            </div>
+
+                            <div class="row row-infor">
+                                <i class="fa-solid fa-at col-2"></i>
+                                <span class="col-9">
+                                    kaizenarchivn@gmail.com
+                                </span>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="item">
+                        <div class="footer-header">
+                            Dịch Vụ
+                        </div>
+                        <div class="footer-info">
+                            <ul>
+                                <li class="item-link"><a href="#">Trang Chủ</a></li>
+                                <li class="item-link"><a href="#">Giới Thiệu</a></li>
+                                <li class="item-link"><a href="#">Xây Dựng | Hoàn Thiện</a></li>
+                                <li class="item-link"><a href="#">Vật Liệu</a></li>
+                                <li class="item-link"><a href="#">Bảng Giá</a></li>
+                                <li class="item-link"><a href="#">Liên Hệ</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="footer-header">
+                            Dự Án Tiêu Biểu
+                        </div>
+                        <div class="list-footer-image row">
+                            <div class="footer-image col-4">
+                                <img src="./assets/images/anh1.jpg" alt="">
+                            </div>
+                            <div class="footer-image col-4">
+                                <img src="./assets/images/anh1.jpg" alt="">
+                            </div>
+                            <div class="footer-image col-4">
+                                <img src="./assets/images/anh1.jpg" alt="">
+                            </div>
+                            <div class="footer-image col-4">
+                                <img src="./assets/images/anh1.jpg" alt="">
+                            </div>
+                            <div class="footer-image col-4">
+                                <img src="./assets/images/anh1.jpg" alt="">
+                            </div>
+                            <div class="footer-image col-4">
+                                <img src="./assets/images/anh1.jpg" alt="">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+
+
+<div id="leftSibar" onclick="closeNavLeft()">
+    <div id="leftSidenav" class="left-sidenav">
+        <div class="leftSibar-menu_header">
+
+            <div class="sidenav-image">
+                <a href="#">
+
+                    <img style="height: 48px;" src="./assets/images/logo1.png" alt="">
+                </a>
+            </div>
+            <a href="javascript:void(0)" class="side-panel_close" onclick="closeNavLeft()">&times;</a>
+
+        </div>
+        <div class="leftSibar-body">
+            <ul class="navbar-leftSibar  mb-2 mb-lg-0">
+                <li class="leftSibar-item">
+                    <a class="leftSibar-link active" aria-current="page" href="#skill">DỰ ÁN</a>
+                </li>
+                <li class="leftSibar-item">
+                    <a class="leftSibar-link " aria-current="page" href="#">XÂY DỰNG</a>
+                </li>
+                <li class="leftSibar-item">
+                    <a class="leftSibar-link " aria-current="page" href="#">vật tư</a>
+                </li>
+                <li class="leftSibar-item">
+                    <a class="leftSibar-link " aria-current="page" href="#">phong thủy</a>
+                </li>
+                <li class="leftSibar-item">
+                    <a class="leftSibar-link " aria-current="page" href="#">hợp đồng</a>
+                </li>
+                <li class="leftSibar-item">
+                    <a class="leftSibar-link " aria-current="page" href="#">Giới thiệu</a>
+                </li>
+                <li class="leftSibar-item">
+                    <a class="leftSibar-link " aria-current="page" href="#">Liên hệ</a>
+                </li>
+
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+<div id="rightSidebar" onclick="closeNav()">
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="side-panel_close" onclick="closeNav()">&times;</a>
+        <div class="sidenav-body">
+            <div class="sidenav-image">
+                <img src="./assets/images/logo1.png" alt="">
+                <span></span>
+            </div>
+            <div>
+                <h3>Liên Hệ</h3>
+                <div class="sidebar-info">
+                    <div class="row row-infor">
+                        <i class="fa-solid fa-location-dot col-1"></i>
+                        <span class="col-9">
+                            45 đường số 29_Khu Đô Thị Vạn Phúc, phường Hiệp Bình Phước_tp.Thủ Đức _ tp.HCM
+                        </span>
+                    </div>
+
+                    <div class="row row-infor">
+                        <i class="fa-solid fa-phone-volume col-1"></i>
+                        <span class="col-9">
+                            081 66.99.669
+                        </span>
+                    </div>
+
+                    <div class="row row-infor">
+                        <i class="fa-solid fa-at col-1"></i>
+                        <span class="col-9">
+                            kaizenarchivn@gmail.com
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h3>Folow Us</h3>
+                <p class="sidebar-link">
+                    <a href="#">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-instagram-square"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                </p>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div id="go-top">
+    <div>
+        <a href="#">
+            <i class="fa-solid fa-arrow-up"></i>
+        </a>
+    </div>
+
+</div>
+
+<!-- {{-- contact --}} -->
+<div id="contact-scroll">
+    <ul class="list-menu ">
+        <li class="item-menu bg-dark" style="border: 1px solid white">
+            <a href="https://www.facebook.com/profile.php?id=100027403417499" target="_blank">
+                <i class="fa-brands fa-facebook-messenger"></i>
+                <span class="item-menu-plugin">Facebook Messenger</span>
+            </a>
+        </li>
+        <li class="item-menu bg-dark" style="border: 1px solid white">
+            <a href="tel:0974231842">
+                <i class="fa-solid fa-mobile-screen-button"></i>
+                <span class="item-menu-plugin">Hotline: 0974231842</span>
+            </a>
+
+        </li>
+        <li class="item-menu bg-dark" style="border: 1px solid white">
+            <a href="mailto:nguyenbac220994@gmail.com">
+                <i class="fa-solid fa-envelope"></i>
+                <span class="item-menu-plugin">email:az@gmail.com</span>
+            </a>
+
+        </li>
+    </ul>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+<script src="./assets/js/main.js"></script>
+
+</html>

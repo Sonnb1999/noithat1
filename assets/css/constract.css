@@ -1,0 +1,184 @@
+.constract-section {
+  /* display: flex; */
+}
+
+.constract-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.constract-header h1 {
+  width: 100%;
+  margin-bottom: 40px;
+  text-align: center;
+  color: #fa4d09;
+}
+
+.constract-content {}
+
+.constract-content .pricing_desc {
+  font-size: 14px;
+  display: block;
+  margin: 45px 15px 0;
+}
+
+.constract-content .pricing_header h4 {
+  margin-bottom: 60px;
+}
+
+.constract-content .list-item {
+  display: flex;
+  width: 100%;
+}
+
+.constract-content .item.onmove {
+  animation: item_onmove ease .6s;
+}
+
+@keyframes item_onmove {
+  from {
+    transform: translateY(90%);
+  }
+
+  to {
+    transform: translateY(100%);
+  }
+}
+
+.constract-content .item {
+  margin: 0 10px;
+  width: calc(100% /3 -60px) !important;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  max-width: 100%;
+  text-align: center;
+
+}
+
+.item.item-center {
+  margin-top: -25px;
+  margin-bottom: 25px;
+}
+
+.bg-323232 {
+  background: #323232;
+}
+
+.constract-body {}
+
+.contract-footer {
+  margin-top: 30px;
+  width: 100%;
+}
+
+.contract-footer h1 {
+  color: #fa4d09;
+}
+
+/* Style the Image Used to Trigger the Modal */
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {
+  opacity: 0.7;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 99999999;
+  /* Sit on top */
+  padding-top: 100px;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.9);
+  /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 1000px;
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content,
+#caption {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0)
+  }
+
+  to {
+    transform: scale(1)
+  }
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.item-js {
+  transition: transform 0.6s;
+}
+
+.item-js:hover {
+  transform: translateY(-20px);
+
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px) {
+  .modal-content {
+    width: 100%;
+  }
+}

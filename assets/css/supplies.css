@@ -1,0 +1,53 @@
+.supples-section {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+}
+
+.carousel-item {
+    height: 400px;
+}
+
+.elementor-button-wrapper {
+    margin: 20px 0;
+    background-color: #fa4d09;
+    color: white;
+    /* width: 150px; */
+}
+
+.carousel-caption {
+    top: 40%;
+    animation: carousel_item ease 3s;
+
+}
+
+.carousel-caption .btn-see {
+    color: white;
+    border: 1px solid white;
+    padding: 10px 30px;
+}
+
+.supples-section .headding {
+    margin: 30px 0px;
+    color: #fa4d09;
+}
+ 
+
+.title {
+    font-size: 30px;
+    font-family: ui-serif;
+}
+
+@keyframes carousel_item {
+    from {
+        transform: translateY(100%);
+        opacity: .3;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    
+}
