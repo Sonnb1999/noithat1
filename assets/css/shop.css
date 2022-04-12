@@ -1,0 +1,155 @@
+.shop-section {
+    width: 100%;
+    display: flex;
+    /* justify-content: space-between; */
+}
+
+.shop-section_left {}
+
+.section_left-header {
+    width: 100%;
+}
+
+.header_search input {
+    padding: 10px 10px 10px 20px;
+    height: 50px;
+
+}
+
+.header_search button {
+    background-color: #fa4d09;
+    width: 50px;
+    height: 50px;
+    margin: -6px 0px 0 -4px;
+    border-radius: 0;
+    color: white;
+}
+
+.section_left-body {
+    padding: 30px 5px;
+
+}
+
+.section_left-body .menu-item ul {
+    list-style-type: disc;
+}
+
+.section_left-body .menu-item li:hover {
+    color: #fa4d09;
+}
+
+.section_left-body .menu-item a:hover {
+    color: #fa4d09;
+}
+
+.menu-item ul {
+    padding-left: 1rem;
+}
+
+.menu-item a {
+    text-decoration: none;
+    color: black;
+}
+
+.menu-item-body ul {
+    list-style-type: none !important;
+    padding: 0;
+}
+
+.section_left-body .menu-item li {
+    position: relative;
+    padding: 10px 0;
+}
+
+.menu-item li span {
+    position: absolute;
+    font-size: 10px;
+    margin-left: 3px;
+
+}
+
+.categories {
+    margin-top: 0px;
+}
+
+.sellers {
+    margin-top: 30px;
+}
+
+.tags {
+    width: 100%;
+    margin-top: 30px;
+}
+
+.cart {
+    margin-top: 30px;
+}
+
+.title-heading {
+    padding: 10px 0;
+    color: #fa4d09;
+    /* text-align: center; */
+    font-weight: 400;
+}
+
+.title-heading::before {
+    content: '';
+    background: #fa4d09;
+    width: 50px;
+    height: 1px;
+    border-right: 1px solid #fa4d09;
+    display: inline-flex;
+    margin-right: 14px;
+    vertical-align: super;
+}
+
+.shop-section_right {
+    flex: 1;
+}
+
+.shop-section_right .section_right-header {
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+
+}
+
+.header_result {
+    line-height: 50px;
+}
+
+.header_option {
+    line-height: 50px;
+}
+
+.header_option select {
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 0 10px;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+}
+
+.header_option select::-ms-expand {
+    display: none;
+}
+
+/* .section_right-body {
+    display: flex;
+    justify-content: space-around;
+} */
+
+.section_right-body .list-item {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.section_right-body .snip0016 {
+    margin: 5px;
+    width: calc(100%/3 - 10px);
+}
