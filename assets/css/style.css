@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+}
+
 ul {
     list-style-type: none;
 }
@@ -20,16 +24,15 @@ ul {
     height: 105px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     box-shadow: rgba(0, 0, 0, 0.3);
+    transition: 0.6s;
 }
 
 #header a:hover {
     color: #fa4d09;
-
 }
 
 .sticky {
     background: white;
-    /* transform: 0.5s; */
     animation: headerDown ease-in-out .6s !important;
     border-bottom: 1px solid rgba(0, 0, 0, 0.3) !important;
 }
@@ -44,16 +47,6 @@ ul {
     }
 
 }
-
-/* @keyframes headerUp {
-    from {
-        transform: translateY(-100%);
-    }
-
-    to {
-        transform: translateY(0);
-    }
-} */
 
 .paused {
     animation-play-state: paused;
@@ -232,7 +225,7 @@ ul {
     display: flex;
 }
 
-.btn-right{
+.btn-right {
     width: calc(100%/2);
     height: 105px;
     padding: 30px;
@@ -241,7 +234,8 @@ ul {
     cursor: pointer;
     text-align: center;
 }
-.btn-right.btn-nav-dark{
+
+.btn-right.btn-nav-dark {
     color: black;
 }
 
@@ -1202,14 +1196,15 @@ figure.snip0016:hover figcaption::before {
     line-height: 30px;
     display: none;
     animation: contactLeft ease-in-out 0.6s;
-    
+
 }
+
 @keyframes contactLeft {
     from {
         transform: translateY(-60%);
     }
-    to 
-    {
+
+    to {
         transform: translateY(0);
     }
 }

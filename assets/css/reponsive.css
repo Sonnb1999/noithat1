@@ -233,6 +233,11 @@
     }
 
 
+    /* detail */
+    #detail .section_footer .item-image {
+        width: calc(100%/2 - 20px);
+
+    }
 
 }
 
@@ -360,6 +365,35 @@
         bottom: 40%;
     }
 
+    /* detail */
+    #detail .detail_header {
+        justify-content: end !important;
+    }
+
+    #detail .section_footer .item-image {
+        width: calc(100%/2 - 20px);
+        /* margin-bottom: 20px; */
+    }
+
+    #detail .section_footer {
+        margin: 20px 0;
+    }
+
+    #detail .description_1_image img {
+        width: 100%;
+    }
+
+    #detail .description_2_image {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    #detail .description_2_image img {
+        width: 100%;
+        margin: 10px 0;
+    }
 
 
 }
@@ -488,6 +522,37 @@
     #go-top {
         bottom: 40%;
     }
+
+    /* detail */
+    #detail .detail_header {
+        justify-content: end !important;
+    }
+
+    #detail .section_footer .item-image {
+        width: calc(100%/2 - 20px);
+        margin-bottom: 20px;
+    }
+
+    #detail .section_footer {
+        margin: 20px 0;
+    }
+
+    #detail .description_1_image img {
+        width: 100%;
+    }
+
+    #detail .description_2_image {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    #detail .description_2_image img {
+        width: 100%;
+        margin: 10px 0;
+    }
+
 
 }
 
@@ -635,6 +700,34 @@
         bottom: 30%;
     }
 
+    /* detail */
+    #detail .detail_header {
+        justify-content: end !important;
+    }
 
+    #detail .section_footer .item-image {
+        width: calc(100% - 20px);
+        margin-bottom: 20px;
+    }
+
+    #detail .section_footer {
+        margin: 20px 0;
+    }
+
+    #detail .description_1_image img {
+        width: 100%;
+    }
+
+    #detail .description_2_image {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    #detail .description_2_image img {
+        width: 100%;
+        margin: 10px 0;
+    }
 
 }
