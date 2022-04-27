@@ -80,10 +80,15 @@
                 </div>
 
                 <div class="btn-right-area">
-                    <i class="fa-solid fa-magnifying-glass btn-right"></i>
+                    <i class="fa-solid fa-magnifying-glass btn-right" onclick="openSearch(this)"></i>
 
                     <i class="fa-solid fa-sliders btn-right btn-menu" onclick="openNav()"
                         style="border-left: 1px solid rgba(255, 255, 255, 0.3);"></i>
+                </div>
+
+                <div class="input_search js-btn-search">
+                    <input type="text" placeholder="Search...">
+                    <i class="fa-solid fa-magnifying-glass text-white icon_search" onclick="search()"></i>
                 </div>
             </div>
         </nav>

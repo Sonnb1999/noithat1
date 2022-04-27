@@ -7,6 +7,8 @@ var goTop = document.querySelector('#go-top');
 
 var formLoginA = document.querySelector('.color-login-js');
 var navLinks = document.querySelectorAll('.nav-link-js');
+var formSearch = document.querySelector('.input_search');
+var btnOpenSearch = document.querySelector('.js-btn-open_search');
 
 
 $('img[alt="Gabriela Silveira"]').attr("class", "default_logo")
@@ -27,6 +29,22 @@ window.addEventListener("scroll", function () {
     else
         $(".default_logo").attr("src", topIMG);
 })
+
+// search 
+function openSearch(x) {
+    x.classList.toggle("fa-xmark");
+
+    if (x.classList.contains('fa-xmark')) {
+        formSearch.style.display = 'flex';
+    }
+    else {
+        formSearch.style.display = 'none';
+    }
+}
+
+function search() {
+    
+}
 
 // contact
 var btns = document.querySelectorAll('.item-menu');
@@ -86,15 +104,6 @@ if ($('.featured__filter').length > 0) {
 
 // contract
 var itemOnMoves = document.getElementsByClassName('item-js')
-
-function item_onmouseover(x) {
-    // x.classList.add("active")
-}
-
-function item_onmouseleave(x) {
-    // x.classList.remove("active")
-}
-
 
 var modal = document.getElementById("myModal");
 // Get the image and insert it inside the modal - use its "alt" text as a caption
