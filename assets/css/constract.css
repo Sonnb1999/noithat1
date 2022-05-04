@@ -182,3 +182,135 @@
     width: 100%;
   }
 }
+
+/* price */
+
+#price {}
+
+.price-image {
+    background: url('http://kaizenarchi.vn/wp-content/uploads/2019/06/section-bg_04.jpg');
+    /* min-height: 500px;  */
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.price-image .price-heading {
+    position: relative;
+    /* font-size: 30px; */
+    font-weight: 500;
+    padding: 10px;
+    text-align: center;
+    height: 250px;
+    line-height: 250px;
+    color: white;
+}
+
+.image_construction {
+    width: 100%;
+}
+
+#price .item {
+    border: 1px solid #e1e1e1;
+    transition: .5s;
+    background-size: cover;
+    background-position: center;
+    background-color: #fff;
+    text-align: center;
+}
+
+.pricing_header {
+    position: relative;
+    z-index: 1;
+    padding: 0 35px 42px;
+    text-align: center;
+}
+
+.pricing_header ::after {
+    background-color: #fa4d09;
+    content: '';
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 28%;
+    height: 1px;
+    width: 44%;
+}
+
+.pricing_header h4 {
+    background-color: #fa4d09;
+    display: inline-block;
+    font-size: 15px;
+    line-height: 35px;
+    margin-bottom: 36px;
+    padding: 0 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #fff;
+    margin-top: -1px;
+}
+
+.pricing_price_wrap {
+    font-size: 60px;
+    line-height: .01;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.price_decimal {
+    position: absolute;
+    z-index: 1;
+    top: 52px;
+    left: 77%;
+    padding-left: 0.15em;
+    vertical-align: top;
+    font-family: inherit;
+    font-size: 1.45em;
+    font-weight: inherit;
+    color: inherit;
+    text-decoration: inherit;
+}
+
+.pricing_content {
+    font-weight: 500;
+    color: #616161;
+    margin: 26px 35px 18px;
+    font-size: 18px;
+}
+
+.pricing_footer {
+    margin: 18px 35px 50px;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+.elementor-button-wrapper {}
+
+.pricing_btn {
+    color: #ffffff !important;
+    background-color: #fa4d09;
+    font-size: 13px;
+    padding: 21px 37px;
+    border-radius: 0;
+
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.pricing_btn:hover {
+    background-color: #232323;
+}
+
+/* text-about */
+
+#content .text-about {
+  font-size: 18px;
+  margin-top: 25px;
+  text-align: justify;
+  line-height: 1.4;
+}
