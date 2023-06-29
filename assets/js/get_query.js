@@ -1,3 +1,4 @@
+
 $(document).ready(async function () {
 
     let full_url = window.location.href
@@ -18,6 +19,7 @@ $(document).ready(async function () {
     document.cookie = "odoo_utm_campaign=" + utmParams['utm_campaign']
     document.cookie = "odoo_utm_medium=" + utmParams['utm_medium']
     console.log('utmParams', utmParams)
+
 
     let dataJsonApi = {}
 
@@ -51,4 +53,5 @@ $(document).ready(async function () {
             .then(result => alert(result))
             .catch(error => alert('error', error));
     }
+
 });
