@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(document).ready(async function () {
 
     let full_url = window.location.href
     let utmParams = {}
@@ -19,44 +19,36 @@ $(document).ready(function () {
     document.cookie = "odoo_utm_medium=" + utmParams['utm_medium']
     console.log('utmParams', utmParams)
 
-    myHeaders = {
-        "Content-Type": "application/json",
-        "Accept": "application/json",
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Methods": "POST",
-        
-    }
-   
-    var raw = JSON.stringify({
-        "jsonrpc": "2.0",
-        "params": {
-            "name": "Kathy"
-        }
+    let dataJsonApi = {}
+
+    await $.getJSON('https://jsonip.com/?callback=?').done(function (data) {
+        var ip_address = window.JSON.parse(JSON.stringify(data, null, 2));
+        dataJsonApi = ip_address;
+        alert(ip_address.ip)
     });
 
-    var requestOptions = {
-        method: 'POST',
-        headers: myHeaders,
-        redirect: 'follow'
-    };
-
-    fetch("https://81e7-58-187-249-149.ngrok-free.app/get/back", {
-        method: "POST", // *GET, POST, PUT, DELETE, etc.
-        mode: "cors", // no-cors, *cors, same-origin
-        // cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
-        credentials: "same-origin",
-        headers: {
-            "Content-Type": "application/json",
-            "Accept": "application/json",
-            "Access-Control-Allow-Origin": "*",
-            "Access-Control-Allow-Methods": "POST",
-          },
-        // redirect: "follow", // manual, *follow, error
-        // referrerPolicy: "no-referrer",
-        body: raw,
-    })
-        .then(response => response.text())
-        .then(result => console.log(result))
-        .catch(error => console.log('error', error));
-
+    var myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+    if (Object.keys(utmParams).length != 0 && utmParams.constructor === Object && 
+    Object.keys(dataJsonApi).length != 0 && dataJsonApi.constructor === Object) {
+        await fetch("https://3323-58-187-249-149.ngrok-free.app/get/back", {
+            method: "POST",
+            mode: "cors", // no-cors, *cors, same-origin
+            credentials: "same-origin",
+            headers: myHeaders,
+            body: JSON.stringify({
+                "jsonrpc": "2.0",
+                "params": {
+                    "full_url": full_url,
+                    "utm": utmParams,
+                    "ip_client": dataJsonApi.ip,
+                    "country": dataJsonApi.country,
+                    "url": full_url.split('?')[0],
+                }
+            }),
+        })
+            .then(response => response.text())
+            .then(result => alert(result))
+            .catch(error => alert('error', error));
+    }
 });
