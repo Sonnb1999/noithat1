@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.datatables.net/v/dt/jq-3.7.0/dt-1.13.5/datatables.min.css" rel="stylesheet" />
+    <link href="./assets/css/styleform.css" rel="stylesheet" />
+
+    <script src="https://cdn.datatables.net/v/dt/jq-3.7.0/dt-1.13.5/datatables.min.js"></script>
+</head>
+
+<body>
+    <div id="toast"></div>
+    <table id="datatable" class="table table-condensed">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <!-- Add more headers as needed -->
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>hi</td>
+                <td>1</td>
+                <!-- Add more cells as needed -->
+            </tr>
+        </tbody>
+    </table>
+
+    <script>new DataTable('#datatable');</script>
+</body>
+<script>
+
+    async function th_set_cookie() {
+        let interval_number = 7
+        let interval_type = 'days'
+        let full_url = window.location.href
+        let utmParams = {}
+        if (full_url.split("?")[1] != null) {
+            const params = new URLSearchParams(full_url.split("?")[1]);
+            for (const [key, val] of params) {
+                if (key.startsWith("utm_")) {
+                    utmParams[key] = val;
+                }
+            }
+        }
+        url_fetch = 'http://localhost:8016/api/check_cookie'
+
+
+        const myHeaders = {
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': '*',
+            "Access-Control-Allow-Headers": "Access-Control-Allow-Headers, Content-Type, Access-Control-Allow-Origin"
+        }
+
+        var requestOptions = {
+            mode: "cors",
+            method: 'GET',
+            headers: myHeaders,
+            redirect: 'follow'
+        };
+
+        let response = await fetch(url_fetch) ? await fetch(url_fetch) : undefined
+
+        var data = response != undefined ? await response.json() : {};
+
+        set_cookie = data['results'] != undefined ? data['results'] : {}
+
+        interval_number = set_cookie['th_access_interval_number'] != undefined ? set_cookie['th_access_interval_number'] : 7
+        interval_type = set_cookie['th_access_interval_type'] != undefined ? set_cookie['th_access_interval_type'] : 'days'
+
+        // 1 ngay = 86400
+        time_cookie_live = 86400
+
+        if (interval_type == 'days') {
+            time_cookie_live = interval_number * 24 * 60 * 60
+        }
+
+        else if (interval_type == 'hours') {
+            time_cookie_live = interval_number * 60 * 60
+        }
+
+        else if (interval_type == 'minutes') {
+            time_cookie_live = interval_number * 60
+        }
+
+        const expires = (new Date(Date.now() + time_cookie_live * 1000)).toUTCString();
+        let utm_source = document.cookie.match(new RegExp('odoo_utm_source' + '=([^;]+)'))
+        if (utm_source == null) {
+            document.cookie = utmParams["utm_source"] != undefined ? "odoo_utm_source=" + utmParams['utm_source'] + "; expires=" + expires + "; path=/;" : ""
+            document.cookie = utmParams["utm_campaign"] != undefined ? "odoo_utm_campaign=" + utmParams['utm_campaign'] + "; expires=" + expires + "; path=/;" : ""
+            document.cookie = utmParams["utm_medium"] != undefined ? "odoo_utm_medium=" + utmParams['utm_medium'] + "; expires=" + expires + "; path=/;" : ""
+        }
+    }
+
+    // document.load = th_set_cookie()
+
+
+
+
+    async function getUser() {
+        url_fetch = 'http://45.117.81.205:8069/api/v1/api_cookie/res.config.settings'
+        // var myHeaders = new Headers();
+        const headers = new Headers();
+        headers.append("Authorization", "Basic" + 'dGVzdDoyNThlZmIyMy04Mzk0LTQ4ZDctYTk3Ny0xYTlmNjYyNGE3NmI');
+        headers.append('Content-Type', 'application/json');
+
+        fetch(url_fetch, {
+            method: 'GET',
+            headers: headers
+        })
+            .then(response => response.json())
+            .then(data => console.log(JSON.stringify(data)))
+
+
+
+        // await fetch(url_fetch, {
+        //     method: 'GET',
+        //     headers: myHeaders
+        // }).then(response => response.text())
+        //     .then(result => console.log(result))
+        //     .catch(error => console.log('error', error));
+
+    }
+
+    document.load = getUser()
+
+
+</script>
+
+<script>
+    // Toast function
+function showSuccessToast() {
+    toast({
+        title: "Thành công!",
+        message: "Đăng nhập thành công.",
+        type: "success",
+        duration: 5000
+    });
+}
+
+function showErrorToast() {
+    toast({
+        title: "Thất bại!",
+        message: "Có lỗi xảy ra, vui lòng kiểm tra lại thông tin.",
+        type: "error",
+        duration: 5000
+    });
+}
+
+function toast({
+                   title = "",
+                   message = "",
+                   type = "info",
+                   duration = 3000
+               }) {
+    const main = document.getElementById("toast");
+    if (main) {
+        const toast = document.createElement("div");
+
+        //Auto remove toast
+        const autoRemoveId = setTimeout(function () {
+            main.removeChild(toast);
+        }, duration + 1000);
+
+        // Remove toast when clicked
+        toast.onclick = function (e) {
+            if (e.target.closest(".toast__close")) {
+                main.removeChild(toast);
+                clearTimeout(autoRemoveId);
+            }
+        };
+
+        // cac loai icon
+        const icons = {
+            success: "fas fa-check-circle",
+            info: "fas fa-info-circle",
+            warning: "fas fa-exclamation-circle",
+            error: "fas fa-exclamation-circle"
+        };
+
+        // khai bao type
+        const icon = icons[type];
+        const delay = (duration / 1000).toFixed(2);
+
+        //add class
+        toast.classList.add("toast", `toast--${type}`);
+
+        toast.style.animation = `slideInLeft_1 ease .3s, fadeOut_1 linear 1s ${delay}s forwards`;
+        //toast.style.animation = `slideInLeft_1 ease 1s`;
+
+        toast.innerHTML = `
+                    <div class="toast__icon">
+                        <i class="${icon}"></i>
+                    </div>
+                    <div class="toast__body">
+                        <h3 class="toast__title">${title}</h3>
+                        <p class="toast__msg">${message}</p>
+                    </div>
+                    <div class="toast__close">
+                        <i class="fas fa-times"></i>
+                    </div>
+                `;
+        main.appendChild(toast);
+    }
+}
+
+</script>
+
+</html>
