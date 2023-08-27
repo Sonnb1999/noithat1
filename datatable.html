@@ -32,7 +32,7 @@
 
     <script>new DataTable('#datatable');</script>
 </body>
-<script>
+<!-- <script>
 
     async function th_set_cookie() {
         let interval_number = 7
@@ -129,70 +129,70 @@
     document.load = getUser()
 
 
-</script>
-
+</script> -->
+<script src = "https://samdev.eln.vn/formio/static/src/js/set_cookie.js" ></script>
 <script>
     // Toast function
-function showSuccessToast() {
-    toast({
-        title: "Thành công!",
-        message: "Đăng nhập thành công.",
-        type: "success",
-        duration: 5000
-    });
-}
+    function showSuccessToast() {
+        toast({
+            title: "Thành công!",
+            message: "Đăng nhập thành công.",
+            type: "success",
+            duration: 5000
+        });
+    }
 
-function showErrorToast() {
-    toast({
-        title: "Thất bại!",
-        message: "Có lỗi xảy ra, vui lòng kiểm tra lại thông tin.",
-        type: "error",
-        duration: 5000
-    });
-}
+    function showErrorToast() {
+        toast({
+            title: "Thất bại!",
+            message: "Có lỗi xảy ra, vui lòng kiểm tra lại thông tin.",
+            type: "error",
+            duration: 5000
+        });
+    }
 
-function toast({
-                   title = "",
-                   message = "",
-                   type = "info",
-                   duration = 3000
-               }) {
-    const main = document.getElementById("toast");
-    if (main) {
-        const toast = document.createElement("div");
+    function toast({
+        title = "",
+        message = "",
+        type = "info",
+        duration = 3000
+    }) {
+        const main = document.getElementById("toast");
+        if (main) {
+            const toast = document.createElement("div");
 
-        //Auto remove toast
-        const autoRemoveId = setTimeout(function () {
-            main.removeChild(toast);
-        }, duration + 1000);
-
-        // Remove toast when clicked
-        toast.onclick = function (e) {
-            if (e.target.closest(".toast__close")) {
+            //Auto remove toast
+            const autoRemoveId = setTimeout(function () {
                 main.removeChild(toast);
-                clearTimeout(autoRemoveId);
-            }
-        };
+            }, duration + 1000);
 
-        // cac loai icon
-        const icons = {
-            success: "fas fa-check-circle",
-            info: "fas fa-info-circle",
-            warning: "fas fa-exclamation-circle",
-            error: "fas fa-exclamation-circle"
-        };
+            // Remove toast when clicked
+            toast.onclick = function (e) {
+                if (e.target.closest(".toast__close")) {
+                    main.removeChild(toast);
+                    clearTimeout(autoRemoveId);
+                }
+            };
 
-        // khai bao type
-        const icon = icons[type];
-        const delay = (duration / 1000).toFixed(2);
+            // cac loai icon
+            const icons = {
+                success: "fas fa-check-circle",
+                info: "fas fa-info-circle",
+                warning: "fas fa-exclamation-circle",
+                error: "fas fa-exclamation-circle"
+            };
 
-        //add class
-        toast.classList.add("toast", `toast--${type}`);
+            // khai bao type
+            const icon = icons[type];
+            const delay = (duration / 1000).toFixed(2);
 
-        toast.style.animation = `slideInLeft_1 ease .3s, fadeOut_1 linear 1s ${delay}s forwards`;
-        //toast.style.animation = `slideInLeft_1 ease 1s`;
+            //add class
+            toast.classList.add("toast", `toast--${type}`);
 
-        toast.innerHTML = `
+            toast.style.animation = `slideInLeft_1 ease .3s, fadeOut_1 linear 1s ${delay}s forwards`;
+            //toast.style.animation = `slideInLeft_1 ease 1s`;
+
+            toast.innerHTML = `
                     <div class="toast__icon">
                         <i class="${icon}"></i>
                     </div>
@@ -204,9 +204,9 @@ function toast({
                         <i class="fas fa-times"></i>
                     </div>
                 `;
-        main.appendChild(toast);
+            main.appendChild(toast);
+        }
     }
-}
 
 </script>
 
