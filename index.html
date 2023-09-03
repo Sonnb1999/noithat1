@@ -168,10 +168,7 @@
                         </button>
                     </div>
                     <div class="col-5">
-                        <div id="formio_form_iframe_container_f0962ca9-59fa-4424-97a4-08628c05be10" class="formio_form_iframe_container"></div >
-                            <script src = "https://samdev.eln.vn/formio/static/src/js/get_utm_url.js"></script>
-                            <script>GetForm("https://samdev.eln.vn/formio/public/form/new/f0962ca9-59fa-4424-97a4-08628c05be10/", "f0962ca9-59fa-4424-97a4-08628c05be10") </script>
-                            <script src = "https://samdev.eln.vn/formio/static/lib/iframe-resizer/iframeResizer.min.js"></script>
+                        <div id="formio_form_iframe_container_f0962ca9-59fa-4424-97a4-08628c05be10" class="formio_form_iframe_container"></div ><script src = "https://samdev.eln.vn/formio/static/src/js/get_utm_url.js"></script><script>GetForm("https://samdev.eln.vn/formio/public/form/new/f0962ca9-59fa-4424-97a4-08628c05be10/", "f0962ca9-59fa-4424-97a4-08628c05be10") </script><script src = "https://samdev.eln.vn/formio/static/lib/iframe-resizer/iframeResizer.min.js"></script>
                             <script> iFrameResize({heightCalculationMethod: 'grow', }, '.formio_form_embed'); </script>
                     </div>
                 </div>
@@ -875,11 +872,22 @@
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
 
-<!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
 <script src="./assets/js/main.js"></script>
 <!-- <script src="./assets/js/get_query.js"></script> -->
 <script src = "https://samdev.eln.vn/formio/static/src/js/set_cookie.js" ></script>
+<script>
+    window.addEventListener('message', (event) => {
+        // Kiểm tra nguồn gốc của thông điệp
+        if (event.origin === 'https://samdev.eln.vn/') { // Đảm bảo nguồn gốc là đúng
+            const receivedMessage = event.data;
 
+            // Xử lý thông điệp ở đây
+            console.log('Received message from iframe:', receivedMessage);
+        }
+    });
+
+</script>
 </html>
