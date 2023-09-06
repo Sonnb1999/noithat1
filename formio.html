@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css">
+    <script src="https://cdn.form.io/js/formio.embed.js"></script>
+</head>
+
+<body>
+    <div id="formio_builder"></div>
+
+</body>
+<script>
+    Formio.builder(document.getElementById('formio_builder'), {}, {
+        builder: {
+            basic: false,
+            advanced: false,
+            data: false,
+            customBasic: {
+                title: 'Basic Components',
+                default: true,
+                weight: 0,
+                components: {
+                    textfield: true,
+                    textarea: true,
+                    email: true,
+                    phoneNumber: true,
+                }
+            },
+            custom: {
+                title: 'Trường đã chỉnh sửa',
+                weight: 10,
+                components: {
+                    name: {
+                        title: 'Họ và Tên',
+                        key: 'name',
+                        icon: 'terminal',
+                        schema: {
+                            label: 'Họ và Tên',
+                            type: 'textfield',
+                            key: 'name',
+                            input: true,
+                            
+                        }
+                    },
+                    email: {
+                        title: 'Email',
+                        key: 'email',
+                        icon: 'at',
+                        schema: {
+                            label: 'Email',
+                            type: 'email',
+                            key: 'email',
+                            input: true
+                        }
+                    },
+                    phoneNumber: {
+                        title: 'Số điện thoại',
+                        key: 'phone',
+                        icon: 'phone-square',
+                        schema: {
+                            label: 'Số điện thoại',
+                            type: 'phoneNumber',
+                            key: 'phone',
+                            input: true,
+                            inputMask: "",
+                        }
+                    }
+                }
+            },
+            layout: {
+                components: {
+                    table: false
+                }
+            }
+        },
+        editForm: {
+            textfield: [
+                {
+                    key: 'api',
+                    ignore: true
+                }
+            ]
+        }
+    }).then(function (builder) {
+        builder.on('saveComponent', function () {
+            console.log(builder.schema);
+        });
+    });
+
+  
+
+
+
+</script>
+
+</html>
