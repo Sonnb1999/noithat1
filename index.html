@@ -149,16 +149,7 @@
                             adipiscing elit, sed do eiusmod tempor incididunt ut
                             labore et dolore magna aliqua. Ut enim ad minim veniam,
                             quis nostrud exercitation ullamco laboris nisi ut
-                            aliquip ex ea commodo consequat. 1
-    
-    
-    
-                            <!-- <div class="formio_form_iframe_container"> 
-                                <iframe src="http://localhost:8016/formio/public/form/new/842382b6-7433-4a2a-9963-af3cad84bf6d/0" class="formio_form_embed"  style="width: 100%;"></iframe> 
-                                <script src = "http://localhost:8016/formio/static/lib/iframe-resizer/iframeResizer.min.js" ></script>
-                                <script> iFrameResize({heightCalculationMethod: 'grow', }, '.formio_form_embed'); </script> 
-                            </div> -->
-    
+                            aliquip ex ea commodo consequat. 
                         </p>
                         <div></div>
                         <button class="btn btn-light border-1 border-dark p-2">Xem thêm
@@ -589,7 +580,6 @@
                                     </div>
                                     <a href="./blogs/mix_colours.html" class="btn bg-light text-warning btn_item">Click
                                         here</a>
-
                                 </div>
                             </div>
                         </div>
@@ -837,11 +827,22 @@
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script> -->
 
-<!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
 <script src="./assets/js/main.js"></script>
 <!-- <script src="./assets/js/get_query.js"></script> -->
 <script src = "https://samdev.eln.vn/formio/static/src/js/set_cookie.js" ></script>
+<script>
+    window.addEventListener('message', (event) => {
+        // Kiểm tra nguồn gốc của thông điệp
+        if (event.origin === 'https://samdev.eln.vn') { // Đảm bảo nguồn gốc là đúng
+            const receivedMessage = event.data;
 
+            // Xử lý thông điệp ở đây
+            console.log('Received message from iframe:', receivedMessage);
+        }
+    });
+
+</script>
 </html>
