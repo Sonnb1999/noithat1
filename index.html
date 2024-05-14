@@ -847,7 +847,8 @@
   
   
       async function call_server(utmParams) {
-          const url_fetch = 'https://2p.sambala.net/api/check_cookie'
+          try {
+            const url_fetch = 'https://2p.sambala.net/api/check_cookie'
           const myHeaders = {
               'Content-Type': 'application/json',
               'Access-Control-Allow-Origin': '*',
@@ -865,6 +866,8 @@
   
           // let response = await fetch(url_fetch) ? await fetch(url_fetch) : undefined
           let response = await fetch(url_fetch)
+          console.log("call api sucssess!")
+          
   
           let data = response != undefined ? await response.json() : {};
   
@@ -890,6 +893,9 @@
               document.cookie = utmParams["utm_source"] != undefined ? "odoo_utm_source=" + utmParams['utm_source'] + "; expires=" + expires + "; path=/;" : ""
               document.cookie = utmParams["utm_campaign"] != undefined ? "odoo_utm_campaign=" + utmParams['utm_campaign'] + "; expires=" + expires + "; path=/;" : ""
               document.cookie = utmParams["utm_medium"] != undefined ? "odoo_utm_medium=" + utmParams['utm_medium'] + "; expires=" + expires + "; path=/;" : ""
+          }
+          } catch (error) {
+            console.log(error)
           }
       }
   
