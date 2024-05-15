@@ -257,6 +257,7 @@ async function count_click(fullUrl, utmParams) {
     link_tracker: fullUrl.split("?")[0],
     odoo_utmParams: utmParams,
     code: code_session != null ? code_session : '',
+    referrer: document.referrer,
   };
 
   let headers = new Headers({
